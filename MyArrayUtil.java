@@ -132,4 +132,9 @@ public static void moveZerosToEnd (int[] arr){
   System.out.println("array without zeros=====================");
 }
   
+
+//Q Given an array of integers, return an array ith even integers removed.
+//Input: arr= {3,2,4,7,10,6,5}\
+//Output arr={3,7,5}
+
 }
