@@ -1,7 +1,6 @@
 public class MyArrayUtil {
 
   public static void main (String[] args){
-    System.out.println("Hello world");
 
     int[] myArray = {6,10,9,34,0,33,5,0,0, 77, 21,15};
     int[] oddNumbers = getOddNumFromArray(myArray);
@@ -14,7 +13,7 @@ public class MyArrayUtil {
     // System.out.println(findMinValueInArray(myArray)); // finds minimum value in an array
   //  int secondMax = secondMaximunValueArray(myArray);
   //  System.out.println(secondMax);
-   moveZerosToEnd(myArray);
+   moveZeroToEnd_2(myArray);
   }
 
   public static void printArray (int[] arr){
@@ -133,8 +132,26 @@ public static void moveZerosToEnd (int[] arr){
 }
   
 
-//Q Given an array of integers, return an array ith even integers removed.
-//Input: arr= {3,2,4,7,10,6,5}\
-//Output arr={3,7,5}
+public static void moveZeroToEnd_2 (int[] arr){
+  int length = arr.length;
+
+  //use j to track zero elements
+  //use i to track non-zero elements
+  //whenever a zero is encountered, swap the order of the elements
+
+  int j = 0; //intialize index to start tracking zero elements
+  for (int i = 0; i < length; i++){
+    if(arr[i] != 0 && arr[j] == 0){
+      //perform a swap
+      int temp = arr[j];
+      arr[j] = arr[i];
+      arr[i] = temp;
+    }
+
+    if(arr[j] != 0){
+      j++;
+    }
+  }
+}
 
 }
