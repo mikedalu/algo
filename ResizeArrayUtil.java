@@ -30,7 +30,7 @@ public static int[] resizeArray(int[] arr, int capacity){
   for (int i = 0; i < arr.length; i++){
     newArray[i] = arr[i];
   }
-
+ arr = newArray;
   return newArray;
 }
 }
